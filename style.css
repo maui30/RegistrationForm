@@ -1,0 +1,24 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: orange;
+}
+
+.wrapper{
+    background-color: white;
+    position: relative;
+    max-width: 900px;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 0 15px;
+    width:100%;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1)
+}

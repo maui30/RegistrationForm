@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registration</title>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="#">
+            <div class="left">
+                <div class="name">
+                    <label for="name">Name</label>
+                    <input type="text">
+                    <p>First Name</p>
+                    <input type="text">
+                    <p>Last Name</p>
+                </div>
+
+                <div class="email">
+                    <label for="email">Email</label>
+                    <input type="email">
+                    <p>example@example.com</p>
+                </div>
+            </div>
+        
+            <div class="right">
+                <div class="dateOfBirth">
+                    <label for="dateOfBirth">Date of Birth</label>
+                    <input type="date" name="" id="">
+                    <p>Date</p>
+                </div>
+
+                <div class="phone">
+                    <label for="phone">Phone Number</label>
+                    <input type="text">
+                    <p>Please enter a valid phone number</p>
+                </div>
+            </div>
+        
+            <div class="address">
+                <label for="address">Address</label>
+                <input type="text">
+                <p>Street Address</p>
+
+                <input type="text">
+                <p>Street Address Line 2</p>
+
+                <input type="text">
+                <p>City</p>
+
+                <input type="text">
+                <p> State / Province</p>
+
+                <input type="text">
+                <p>Postal / Zip Code</p>
+
+            </div>
+
+            <div class="postion">
+                <label for="postion">Applying Position</label>
+                <input type="text">
+            </div>
+
+            <div class="work">
+                <label for="work">Type of Work</label>
+                <input type="radio" name="work" value="P">Permanent<br/>
+                <input type="radio" name="work" value="T">Temporary<br/>
+                <input type="radio" name="work" value="B">Both<br/>
+                <input type="radio" name="work" value="O">Other<br/>
+            </div>
+            
+            <div class="resume">
+                <label for="resume">Please Upload your Resume</label>
+                <input type="file">
+            </div>
+
+            <div class="additional">
+                <label for="additional">Cover Letter or Additional Information</label>
+                <textarea name="additional" id="" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="status">
+                <label for="status">Veteran Status (Please select the opinion that describes your status the best)</label>
+                <input type="radio" name="status" value="v">I am a veteran<br/>
+                <input type="radio" name="status" value="sv">I am recently seperated veteran<br/>
+                <input type="radio" name="status" value="nv">I am not a veteran<br/>
+                <input type="radio" name="status" value="sdv">I am a special disabled veteran<br/>
+                <input type="radio" name="status" value="o">Other<br/>
+            </div>
+
+            <div class="gender">
+                <label for="gender">Veteran Status (Please select the opinion that describes your status the best)</label>
+                <input type="radio" name="gender" value="f">Female<br/>
+                <input type="radio" name="gender" value="tf">Transgender Female<br/>
+                <input type="radio" name="gender" value="m">Male<br/>
+                <input type="radio" name="gender" value="tm">Transgender Male<br/>
+                <input type="radio" name="gender" value="o">Other<br/>
+            </div>
+
+            <div class="disabilities">
+                <label for="disabilities">Disabilities</label>
+                <input type="radio" name="disbalilities" value="nd">I have no disability<br/>
+                <input type="radio" name="disbalilities" value="tom">I have two or more impairments and/or disabling medical conditions.<br/>
+                <input type="radio" name="disbalilities" value="sld">I have a Specific Learning Difficulty (e.g. Dyslexia/Dyspraxia/AD(H)D)<br/>
+                <input type="radio" name="disbalilities" value="s/ci">I have a social/communication impairment such as Asperger's syndrome/other autistic spectrum disorder<br/>
+                <input type="radio" name="disbalilities" value="lsi">I have a long standing illness or health condition such as cancer, HIV, diabetes, chronic heart disease, or epilepsy<br/>
+                <input type="radio" name="disbalilities" value="pi">I have a physical impairment or mobility issues (e.g. difficulty using arms/using a wheelchair or crutches)<br/>
+                <input type="radio" name="disbalilities" value="d">I am deaf or have a serious hearing impairment<br/>
+                <input type="radio" name="disbalilities" value="b">I am blind or have a serious visual impairment uncorrected by glasses<br/>
+                <input type="radio" name="disbalilities" value="p">Prefer not to answer<br/>
+                <input type="radio" name="disbalilities" value="nl">I have disabilitiy, impairment, or medical condition not listed here<br/>
+            </div>
+
+            <div class="race">
+                <label for="race">Race</label>
+                <input type="radio" name="race" value="an">American Native or Alaska Native<br/>
+                <input type="radio" name="race" value="b">Black or African American<br/>
+                <input type="radio" name="race" value="w">White<br/>
+                <input type="radio" name="race" value="d">Decline to specify<br/>
+                <input type="radio" name="race" value="o">Other<br/>
+                <input type="radio" name="race" value="a">Asian<br/>
+                <input type="radio" name="race" value="nh">Native Hawaiian or Other Pacific Islander<br/>
+                <input type="radio" name="race" value="tm">Two or more races<br/>
+            </div>
+
+            <div class="notes">
+                <label for="notes">Additional Notes</label>
+                <textarea name="additional" id="" cols="30" rows="10"></textarea>
+            </div>
+
+            <input type="submit" value="submit" name="submit">
+        </form>
+        
+
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>
