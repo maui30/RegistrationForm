@@ -4,104 +4,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Registration</title>
 </head>
 <body>
     <div class="wrapper">
+        <h1>Employee Registration Form</h1>
         <form action="#">
-            <div class="left">
-                <div class="name">
-                    <label for="name">Name</label>
-                    <input type="text">
-                    <p>First Name</p>
-                    <input type="text">
-                    <p>Last Name</p>
-                </div>
-
-                <div class="email">
-                    <label for="email">Email</label>
-                    <input type="email">
-                    <p>example@example.com</p>
-                </div>
-            </div>
-        
-            <div class="right">
-                <div class="dateOfBirth">
-                    <label for="dateOfBirth">Date of Birth</label>
-                    <input type="date" name="" id="">
-                    <p>Date</p>
-                </div>
-
-                <div class="phone">
-                    <label for="phone">Phone Number</label>
-                    <input type="text">
-                    <p>Please enter a valid phone number</p>
+               
+            <div class="full left">
+                <label for="name" class="title">Full Name</label>
+                <div class="ls">
+                    <span  id="first">
+                        <input type="text" name="fname">
+                        <label for="firstname" class="subf">First Name</label>
+                    </span>
+                    <span id="second">
+                        <input type="text" name="fname">
+                        <label for="lastname" class="subf">Last Name</label>
+                    </span>
                 </div>
             </div>
-        
+
+            
+            <div class="date right">
+                <label for="date" class="title" id="lside">Date of Birth</label>
+                <input type="date" name="date" class="half">
+                <label for="date" class="sub">Date</label>
+            </div>
+
+            <div class="email left">
+                <label for="email" class="title">Email</label>
+                <input type="email" class="half">
+                <label for="email" class="sub">example@example.com</label>
+            </div>
+
+            <div class="phone right">
+                <label for="phone" class="title">Phone Number</label>
+                <input type="tel" class="half" for="phone">
+                <label for="phone" class="sub" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">Please enter a valid phone number</label>
+            </div>
+
             <div class="address">
-                <label for="address">Address</label>
-                <input type="text">
-                <p>Street Address</p>
+                <label for="address" class="title">Address</label>
+                <input type="text" class="wide" for="address"> 
+                <label for="address" class="sub">Street Address</label>
 
-                <input type="text">
-                <p>Street Address Line 2</p>
+                <input type="text" class="wide" for="address">
+                <label for="address" class="sub">Street Address Line 2</label>
 
-                <input type="text">
-                <p>City</p>
+                <input type="text" class="wide" for="address">
+                <label for="address" class="sub">City</label>
 
-                <input type="text">
-                <p> State / Province</p>
+                <input type="text" class="wide" for="address">
+                <label for="address" class="sub">State / Province</label>
 
-                <input type="text">
-                <p>Postal / Zip Code</p>
-
+                <input type="text" class="wide" for="address">
+                <label for="address" class="sub">Postal / Zip Code</label>
             </div>
+
 
             <div class="postion">
-                <label for="postion">Applying Position</label>
-                <input type="text">
-            </div>
-
-            <div class="work">
-                <label for="work">Type of Work</label>
-                <input type="radio" name="work" value="P">Permanent<br/>
-                <input type="radio" name="work" value="T">Temporary<br/>
-                <input type="radio" name="work" value="B">Both<br/>
-                <input type="radio" name="work" value="O">Other<br/>
-            </div>
-            
-            <div class="resume">
-                <label for="resume">Please Upload your Resume</label>
-                <input type="file">
+                <label for="postion" class="title">Applying Position</label>
+                <label for="images" class="drop-container">
+                <span class="drop-title">Browse Files</span>
+                Drag and drop files here
+                <input type="file" id="images" accept="image/*" required class="file">
+                </label>
             </div>
 
             <div class="additional">
-                <label for="additional">Cover Letter or Additional Information</label>
-                <textarea name="additional" id="" cols="30" rows="10"></textarea>
+                <label for="additional" class="title">Cover Letter or Additional Information</label>
+                <textarea name="additional" id="" cols="125" rows="10" class="text" placeholder="Type here"></textarea>
             </div>
 
             <div class="status">
-                <label for="status">Veteran Status (Please select the opinion that describes your status the best)</label>
-                <input type="radio" name="status" value="v">I am a veteran<br/>
-                <input type="radio" name="status" value="sv">I am recently seperated veteran<br/>
-                <input type="radio" name="status" value="nv">I am not a veteran<br/>
-                <input type="radio" name="status" value="sdv">I am a special disabled veteran<br/>
-                <input type="radio" name="status" value="o">Other<br/>
+                <label for="status" class="title">Veteran Status (Please select the opinion that describes your status the best)</label>
+                <table class="stat">
+                    <tr>
+                        <td><input type="radio" name="status" value="v">I am a veteran</td>
+                        <td><input type="radio" name="status" value="sdv">I am a special disabled veteran<br/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="status" value="sv">I am recently seperated veteran<br/></td>
+                        <td><input type="radio" name="status" value="sv">I am an other protected veteran<br/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="status" value="nv">I am not a veteran<br/></td>
+                        <td><input type="radio" name="status" value="o">Other<br/></td>
+                    </tr>
+                </table>
             </div>
 
-            <div class="gender">
-                <label for="gender">Veteran Status (Please select the opinion that describes your status the best)</label>
-                <input type="radio" name="gender" value="f">Female<br/>
-                <input type="radio" name="gender" value="tf">Transgender Female<br/>
-                <input type="radio" name="gender" value="m">Male<br/>
-                <input type="radio" name="gender" value="tm">Transgender Male<br/>
-                <input type="radio" name="gender" value="o">Other<br/>
+             <div class="gender">
+                <label for="gender" class="title">Gender</label>
+                <table class="gen">
+                    <tr>
+                        <td><input type="radio" name="gender" value="f">Female<br/></td>
+                        <td><input type="radio" name="gender" value="m">Male<br/></td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="gender" value="tf">Transgender Female<br/></td>
+                        <td> <input type="radio" name="gender" value="tm">Transgender Male<br/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="gender" value="pn">Prefer Not to Say<br/></td>
+                        <td><input type="radio" name="gender" value="o">Other<br/></td>
+                    </tr>
+                    
+                </table>
             </div>
 
             <div class="disabilities">
-                <label for="disabilities">Disabilities</label>
+                <label for="disabilities" class="title">Disabilities</label>
                 <input type="radio" name="disbalilities" value="nd">I have no disability<br/>
                 <input type="radio" name="disbalilities" value="tom">I have two or more impairments and/or disabling medical conditions.<br/>
                 <input type="radio" name="disbalilities" value="sld">I have a Specific Learning Difficulty (e.g. Dyslexia/Dyspraxia/AD(H)D)<br/>
@@ -115,20 +134,30 @@
             </div>
 
             <div class="race">
-                <label for="race">Race</label>
-                <input type="radio" name="race" value="an">American Native or Alaska Native<br/>
-                <input type="radio" name="race" value="b">Black or African American<br/>
-                <input type="radio" name="race" value="w">White<br/>
-                <input type="radio" name="race" value="d">Decline to specify<br/>
-                <input type="radio" name="race" value="o">Other<br/>
-                <input type="radio" name="race" value="a">Asian<br/>
-                <input type="radio" name="race" value="nh">Native Hawaiian or Other Pacific Islander<br/>
-                <input type="radio" name="race" value="tm">Two or more races<br/>
+                <label for="race" class="title">Race</label>
+                <table class="rac">
+                    <tr>
+                        <td><input type="radio" name="race" value="an"><label>American Native or Alaska Native</label><br/></td>
+                        <td><input type="radio" name="race" value="a">Asian<br/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="race" value="b">Black or African American<br/></td>
+                        <td><input type="radio" name="race" value="nh">Native Hawaiian or Other Pacific Islander<br/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="race" value="w">White<br/></td>
+                        <td><input type="radio" name="race" value="tm">Two or more races<br/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="race" value="d">Decline to specify<br/></td>
+                        <td><input type="radio" name="race" value="o">Other<br/></td>
+                    </tr>
+                </table>
             </div>
 
             <div class="notes">
-                <label for="notes">Additional Notes</label>
-                <textarea name="additional" id="" cols="30" rows="10"></textarea>
+                <label for="notes" class="title">Additional Notes</label>
+                <textarea name="additional" id="" cols="125" rows="10" class="text" style="min-height:20rem;">Type here</textarea>
             </div>
 
             <input type="submit" value="submit" name="submit">
