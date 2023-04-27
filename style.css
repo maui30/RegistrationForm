@@ -186,5 +186,22 @@ Input[type="submit"]{
     justify-content: center
 }
 
+#subm{
+    background: #0066A2;
+	color: white;
+	border-color: #0066A2;
+	height: 50px;
+	width: 100px;
+	font: bold 15px arial,sans-serif;
+	text-shadow: none;
+    align-text: center;
+}
 
+#subm:hover{
+    background:white;
+    color: black;
+}
 
+.submit{
+    text-align: center;
+}
