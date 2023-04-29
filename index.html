@@ -53,16 +53,29 @@
                 <label for="address" class="title">Address</label>
                 <input type="text" class="wide" for="address"> 
                 <label for="address" class="sub">Street Address</label>
+                
+                <div class="search-container">
+                    <input type="text" class="wide" for="address" name="brgy" id="brgy">
+                    <label for="address" class="sub" >Street Address Line 2</label>
+                    <div class="suggestions1">
+                    <ul></ul>
+                    </div>
+                </div>
 
-                <input type="text" class="wide" for="address">
-                <label for="address" class="sub">Street Address Line 2</label>
+                <div class="search-container">
+                    <input type="text" class="wide" for="city" name="city" id="city">
+                    <label for="address" class="sub" >City</label>
+                    <div class="suggestions2">
+                    <ul></ul>
+                </div>
 
-                <input type="text" class="wide" for="address">
-                <label for="address" class="sub">City</label>
-
-                <input type="text" class="wide" for="address">
-                <label for="address" class="sub">State / Province</label>
-
+                <div class="search-container">
+                    <input type="text" class="wide" for="province" name="province" id="province">
+                    <label for="address" class="sub" >State / Province</label>
+                    <div class="suggestions3">
+                    <ul></ul>
+                    </div>
+                </div>
                 <input type="text" class="wide" for="address">
                 <label for="address" class="sub">Postal / Zip Code</label>
             </div>
@@ -73,7 +86,7 @@
                 <label for="images" class="drop-container">
                 <span class="drop-title">Browse Files</span>
                 Drag and drop files here
-                <input type="file" id="images" accept="image/*" required class="file">
+                <input type="file" id="images" accept="image/*" class="file">
                 </label>
             </div>
 
@@ -166,7 +179,9 @@
         
 
     </div>
+    <script src="./js/barangay.js" defer></script>
     <script src="./js/city.js" defer></script>
+    <script src="./js/province.js" defer></script>
     <script src="./js/script.js" defer></script>
     
 </body>
