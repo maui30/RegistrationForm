@@ -26,7 +26,6 @@ provS.addEventListener("change", (e) => {
     op.textContent = filteredCity[i].name;
     cityS.appendChild(op);
   }
-  // enable second select tag
   cityS.disabled = false;
 });
 
@@ -40,15 +39,14 @@ cityS.addEventListener("change", (e) => {
       brgy.municipality_id ===
       city.find((city) => city.name === selectedCity).municipality_id
   );
-  // clear existing options
+
   brgyS.innerHTML = "";
-  // add new options
+  
   for (let i = 0; i < filteredBrgys.length; i++) {
     const op = document.createElement("option");
     op.setAttribute("value", filteredBrgys[i].name);
     op.textContent = filteredBrgys[i].name;
     brgyS.appendChild(op);
   }
-  // enable second select tag
   brgyS.disabled = false;
 });
