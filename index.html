@@ -14,7 +14,7 @@
 <body>
     <div class="wrapper">
         <h1>Employee Registration Form</h1>
-        <form action="#">
+        <form action="next.html">
                
             <div class="full left">
                 <label for="name" class="title">Full Name</label>
@@ -54,35 +54,31 @@
                 <input type="text" class="wide" for="address"> 
                 <label for="address" class="sub">Street Address</label>
                 
-                <div class="search-container">
-                    <input type="text" class="wide" for="address" name="brgy" id="brgy">
-                    <label for="address" class="sub" >Street Address Line 2</label>
-                    <div class="suggestions1">
-                    <ul></ul>
-                    </div>
+                <div class="addressSelect">
+                    <select name="prov" id="provSamp" >
+                        <option value=""></option>
+                    </select>
+                    <label for="address" class="sub">State / province</label>
                 </div>
 
-                <div class="search-container">
-                    <input type="text" class="wide" for="city" name="city" id="city">
-                    <label for="address" class="sub" >City</label>
-                    <div class="suggestions2">
-                    <ul></ul>
+                <div class="addressSelect">
+                    <select name="city" id="cityIn" >
+                        <option value=""></option>
+                    </select>
+                    <label for="address" class="sub">City</label>
                 </div>
 
-                <div class="search-container">
-                    <input type="text" class="wide" for="province" name="province" id="province">
-                    <label for="address" class="sub" >State / Province</label>
-                    <div class="suggestions3">
-                    <ul></ul>
-                    </div>
-                </div>
-                <input type="text" class="wide" for="address">
-                <label for="address" class="sub">Postal / Zip Code</label>
+                <div class="addressSelect">
+                    <select name="brgy" id="brgySamp"  >
+                        <option value=""></option>
+                    </select>
+                    <label for="address" class="sub">Barangay</label>
+                </div> 
             </div>
 
 
             <div class="postion">
-                <label for="postion" class="title">Applying Position</label>
+                <label for="postion" class="title">Please Upload Resume</label>
                 <label for="images" class="drop-container">
                 <span class="drop-title">Browse Files</span>
                 Drag and drop files here

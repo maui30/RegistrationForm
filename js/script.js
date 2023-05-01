@@ -1,101 +1,54 @@
-const brgy = document.querySelector("#brgy");
-const suggestions1 = document.querySelector(".suggestions1 ul");
+const provS = document.querySelector("#provSamp");
 
-const cityIn = document.querySelector("#city");
-const suggestions2 = document.querySelector(".suggestions2 ul");
+for (let i = 0; i < province.length; i++) {
+  const op = document.createElement("option");
+  op.setAttribute("value", province[i].name);
+  op.textContent = province[i].name;
+  provS.appendChild(op);
+}
 
-const provinceIn = document.querySelector("#province");
-const suggestions3 = document.querySelector(".suggestions3 ul");
+const cityS = document.querySelector("#cityIn");
+cityS.disabled = true;
 
-let inputUser;
-let input;
-let suggestions;
+provS.addEventListener("change", (e) => {
+  const selectedProv = e.target.value;
+  const filteredCity = city.filter(
+    (city) =>
+      city.province_id ===
+      province.find((prov) => prov.name === selectedProv).province_id
+  );
 
-function search(str) {
-  let results = [];
-  const val = str.toLowerCase();
+  cityS.innerHTML = "";
 
-  for (i = 0; i < inputUser.length; i++) {
-    if (inputUser[i].name.toLowerCase().indexOf(val) > -1) {
-      results.push(inputUser[i].name);
-    }
+  for (let i = 0; i < filteredCity.length; i++) {
+    const op = document.createElement("option");
+    op.setAttribute("value", filteredCity[i].name);
+    op.textContent = filteredCity[i].name;
+    cityS.appendChild(op);
   }
-
-  return results;
-}
-
-function searchHandler(e) {
-  const inputVal = e.currentTarget.value;
-  let results = [];
-  if (inputVal.length > 0) {
-    results = search(inputVal);
-  }
-  showSuggestions(results, inputVal);
-}
-
-function useSuggestion(e) {
-  input.value = e.target.innerText;
-  input.focus();
-}
-
-brgy.addEventListener("focus", (e) => {
-  inputUser = barangay;
-  input = brgy;
-  suggestions = suggestions1;
+  // enable second select tag
+  cityS.disabled = false;
 });
 
-brgy.addEventListener("input", searchHandler);
+const brgyS = document.querySelector("#brgySamp");
+brgyS.disabled = true;
 
-suggestions1.addEventListener("click", useSuggestion);
-
-cityIn.addEventListener("focus", (e) => {
-  inputUser = city;
-  input = cityIn;
-  suggestions = suggestions2;
-});
-
-cityIn.addEventListener("input", searchHandler);
-
-suggestions2.addEventListener("click", useSuggestion);
-
-provinceIn.addEventListener("focus", (e) => {
-  inputUser = province;
-  input = provinceIn;
-  suggestions = suggestions3;
-});
-
-provinceIn.addEventListener("input", searchHandler);
-
-suggestions3.addEventListener("click", useSuggestion);
-
-function showSuggestions(results, inputVal) {
-  maxIn = 10;
-  suggestions.innerHTML = "";
-
-  if (results.length > 0) {
-    for (i = 0; i < results.length && i < maxIn; i++) {
-      let item = results[i];
-      // Highlights only the first match
-      const match = item.match(new RegExp(inputVal, "i"));
-      item = item.replace(match[0], `<strong>${match[0]}</strong>`);
-      suggestions.innerHTML += `<li>${item}</li>`;
-    }
-    suggestions.classList.add("has-suggestions");
-  } else {
-    results = [];
-    suggestions.innerHTML = "";
-    suggestions.classList.remove("has-suggestions");
+cityS.addEventListener("change", (e) => {
+  const selectedCity = e.target.value;
+  const filteredBrgys = barangay.filter(
+    (brgy) =>
+      brgy.municipality_id ===
+      city.find((city) => city.name === selectedCity).municipality_id
+  );
+  // clear existing options
+  brgyS.innerHTML = "";
+  // add new options
+  for (let i = 0; i < filteredBrgys.length; i++) {
+    const op = document.createElement("option");
+    op.setAttribute("value", filteredBrgys[i].name);
+    op.textContent = filteredBrgys[i].name;
+    brgyS.appendChild(op);
   }
-}
-
-// Add event listener to window object to remove suggestions when user clicks outside of input fields
-window.addEventListener("click", (e) => {
-  if (!e.target.closest(".suggestions")) {
-    suggestions1.innerHTML = "";
-    suggestions1.classList.remove("has-suggestions");
-    suggestions2.innerHTML = "";
-    suggestions2.classList.remove("has-suggestions");
-    suggestions3.innerHTML = "";
-    suggestions3.classList.remove("has-suggestions");
-  }
+  // enable second select tag
+  brgyS.disabled = false;
 });
